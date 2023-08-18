@@ -559,7 +559,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Estou ansioso para saber como vai se sair amanhã. \nPor hoje, é isso. Recomendo que fale com o Otavio, ele tem algumas dicas legais para te \npassar.",
+        "texto": "Estou ansioso para saber como vai se sair amanhã. \nPor hoje, é isso. Recomendo que fale com o Otavio, ele tem algumas dicas \nlegais para te passar.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_animacao_dormitorio",
@@ -603,7 +603,7 @@
             "y": 500
         },
         "fundo": "bedroom_day",
-        "texto": "A ideia é que você se acostume cada vez mais com os conceitos.. Gosto de ver a sua evolução",
+        "texto": "A ideia é que você se acostume cada vez mais com os conceitos.. \nGosto de ver a sua evolução",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 35,
@@ -651,7 +651,7 @@
             "y": 500
         },
         "fundo": "bedroom_day",
-        "texto": "Exatamente... é um erro comum pensar que apenas arquivos executáveis \npodem ser testados. Na realidade, os testes podem (e devem!) começar bem antes. \n\nDá uma olhada nesse resumo que eu fiz especialmente pra você:",
+        "texto": "Exatamente... é um erro comum pensar que apenas arquivos executáveis \npodem ser testados. Na realidade, os testes podem (e devem!) começar bem \nantes. \n\nDá uma olhada nesse resumo que eu fiz especialmente pra você:",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "abrir_livro_otavio",
@@ -1427,7 +1427,7 @@
     {
         "id": 79,
         "personagem": "pedro",
-        "emocao": "sad_e",
+        "emocao": "happy_e",
         "posicao": {
             "x": 900,
             "y": 500
@@ -1438,7 +1438,38 @@
         "dialogoInterativo": false,
         "prox_tela": "exibir_cena_transicao_dia_seguinte",
         "texto_padrao": "Ah, entendi!"
+    },
+    {
+        "id": 80,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "PARABÉNS! Acabei de saber que a Julia e o Pedro adoraram \no seu trabalho! Você se saiu muito bem, estou orgulhoso.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_final",
+        "texto_padrao": "Obrigada! Estou muito feliz!"
+    },
+    {
+        "id": 81,
+        "personagem": "otavio",
+        "emocao": "sad_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Você foi bem, mas a Julia e o Pedro optaram por seguir \ncom outra pessoa. Sinto muito..",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_final",
+        "texto_padrao": "Tudo bem.."
     }
+
 
 
 

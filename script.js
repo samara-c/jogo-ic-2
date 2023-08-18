@@ -150,6 +150,7 @@ class Level extends Phaser.Scene {
         let fila_acoes = [];
         let continuar_animacao = false;
         let desafio_pergunta = 1;
+        let desafio_requisitos_valor = 1;
         let pontos_pergunta = 0;
         let pontos_teste_estatico = 0;
 
@@ -893,7 +894,7 @@ class Level extends Phaser.Scene {
                     exibirLousaRequisitosFuncionais();
                     break;
                 case "jogar_desafio_requisitos_funcionais":
-                    jogarDesafioRequisitosFuncionais();
+                    jogarDesafioRequisitosFuncionais(desafio_requisitos_valor);
                     break;
                 case "exibir_cena_transicao_2":
                     semana += 1;
@@ -1567,9 +1568,11 @@ class Level extends Phaser.Scene {
 
                 if (desafio_pergunta < 4) {
 
+                    btn_continuar.removeAllListeners();
                     resolverDesafioOtavio(desafio_pergunta);
 
                 } else if (pontos_pergunta > 2) {
+
                     enunciado_2.destroy();
                     btn_continuar.destroy();
                     verificar_btn.destroy();
