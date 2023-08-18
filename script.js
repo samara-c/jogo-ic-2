@@ -1570,7 +1570,7 @@ class Level extends Phaser.Scene {
                     resolverDesafioOtavio(desafio_pergunta);
 
                 } else if (pontos_pergunta > 2) {
-
+                    enunciado_2.destroy();
                     btn_continuar.destroy();
                     verificar_btn.destroy();
                     rect1.destroy();
@@ -1578,6 +1578,7 @@ class Level extends Phaser.Scene {
                     construirTela(29);
 
                 } else {
+                    enunciado_2.destroy();
                     btn_continuar.destroy();
                     verificar_btn.destroy();
                     rect1.destroy();
@@ -1993,9 +1994,11 @@ class Level extends Phaser.Scene {
                 console.log(vezes_que_pode_reiniciar_o_jogo);
 
                 if (vezes_que_pode_reiniciar_o_jogo > 0) {
+                    btn_continuar.destroy();
                     jogarJogoDaMemoria();
                 }
                 else {
+                    btn_continuar.destroy();
                     construirTela(74);
                 }
 
