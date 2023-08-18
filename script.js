@@ -1571,10 +1571,17 @@ class Level extends Phaser.Scene {
 
                 } else if (pontos_pergunta > 2) {
 
+                    btn_continuar.destroy();
+                    verificar_btn.destroy();
+                    rect1.destroy();
+                    rect2.destroy();
                     construirTela(29);
 
                 } else {
-
+                    btn_continuar.destroy();
+                    verificar_btn.destroy();
+                    rect1.destroy();
+                    rect2.destroy();
                     construirTela(30);
 
                 }
