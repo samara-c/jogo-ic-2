@@ -790,7 +790,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Sim, estamos muito felizes. Parece que alguém vai ter seu trabalho posto à prova, não é mesmo?",
+        "texto": "Sim, estamos muito felizes. Parece que alguém vai ter seu trabalho posto à \nprova, não é mesmo?",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 44,
@@ -806,7 +806,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Claro que não! Estou falando do trabalho do Pedro. Ontem ele terminou o levantamento de requisitos, e fizemos uma aposta.",
+        "texto": "Claro que não! Estou falando do trabalho do Pedro. Ontem ele terminou o \nlevantamento de requisitos, e fizemos uma aposta.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 45,
@@ -1113,7 +1113,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Em breve, teremos uma aplicação funcional. Você deve ver, \nentão, se ela atende aos requisitos que te \napresentamos hoje.",
+        "texto": "Em breve, teremos uma aplicação funcional. Você deve ver, então, se ela atende \naos requisitos que te apresentamos hoje.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 62,
@@ -1129,7 +1129,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Precisamos terminar algumas coisas, então durante essa semana \nvocê pode estudar um pouco mais.",
+        "texto": "Precisamos terminar algumas coisas, então durante essa semana você pode \nestudar um pouco mais.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_cena_transicao_2",
@@ -1190,7 +1190,7 @@
             "y": 500
         },
         "fundo": "bedroom_day",
-        "texto": "Como você mesmo constatou, a documentação que o Pedro escreveu tinha \nalguns erros e os testes estáticos foram importantes para identifica-los. \nEntretanto, precisamos saber se a Julia foi capaz de \ncodificar corretamente o jogo",
+        "texto": "Como você mesmo constatou, a documentação que o Pedro escreveu tinha \nalguns erros e os testes estáticos foram importantes para identifica-los. \nEntretanto, precisamos saber se a Julia foi capaz de codificar corretamente \no jogo",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 67,
@@ -1205,7 +1205,7 @@
             "y": 500
         },
         "fundo": "bedroom_day",
-        "texto": "Primeiramente, quero que você leia novamente os requisitos \nfuncionais do jogo. Está aqui a versão corrigida. ",
+        "texto": "Primeiramente, quero que você leia novamente os requisitos funcionais do jogo. \nEstá aqui a versão corrigida. ",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_documentacao_corrigida",
@@ -1283,7 +1283,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Bem vindo de volta! Espero que esteja animado, pois temos uma \naplicação para testar.",
+        "texto": "Bem vindo de volta! Espero que esteja animado, pois temos uma aplicação \npara testar.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 72,
@@ -1335,7 +1335,7 @@
         "texto_padrao": "Sim.."
     },
     {
-        "id": 73,
+        "id": 75,
         "personagem": "julia",
         "emocao": "angry_e",
         "posicao": {
@@ -1350,7 +1350,7 @@
         "texto_padrao": "Vou começar"
     },
     {
-        "id": 74,
+        "id": 90,
         "personagem": "julia",
         "emocao": "happy_e",
         "posicao": {
@@ -1361,11 +1361,11 @@
         "texto": "Parece que terminamos por aqui, não é mesmo?",
         "visivel": true,
         "dialogoInterativo": false,
-        "prox_tela": 75,
+        "prox_tela": 91,
         "texto_padrao": "Sim, eu terminei"
     },
     {
-        "id": 75,
+        "id": 91,
         "personagem": "julia",
         "emocao": "happy_e",
         "posicao": {

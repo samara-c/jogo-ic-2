@@ -271,6 +271,8 @@ class Level extends Phaser.Scene {
 
         const exibirDocumentacaoCorrigida = () => {
 
+
+
             var btn_continuar;
 
             const video = this.add.video(centerX, centerY - 15, 'requisitos_corrigidos');
@@ -601,6 +603,8 @@ class Level extends Phaser.Scene {
             const personagemNomeFormatado = personagemNome.charAt(0).toUpperCase() + personagemNome.slice(1);
             const texto_completo = tela.texto;
             const fundo = tela.fundo;
+
+            this.input.setDefaultCursor('default');
 
             if (tela.id === 52) {
 
@@ -2003,7 +2007,7 @@ class Level extends Phaser.Scene {
                 }
                 else {
                     btn_continuar.destroy();
-                    construirTela(74);
+                    construirTela(90);
                 }
 
             });
