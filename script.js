@@ -2079,13 +2079,13 @@ class Level extends Phaser.Scene {
 
         // Iniciar a construção da primeira tela
         //jogarDesafioRequisitosFuncionais(1);
-        //iniciarJogo();
+        iniciarJogo();
         //descobrirAtividadesQA();
         //resolverDesafioOtavio(desafio_pergunta);
         //abrirLivroOtavio();
         //jogarJogoDaMemoria();
         //exibirAnimacaoFaculdade();
-        exibirAnimacaoSemana();
+        //exibirAnimacaoSemana();
     }
 }
 
