@@ -1,0 +1,1456 @@
+[
+    {
+        "id": 0,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Oi! Fiquei sabendo que passou na vaga de estagiário de Qualidade da Jogos \nDourados!\n \nMeus parabéns! Como está se sentindo? ",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Muito feliz!",
+            "prox_tela": 2,
+            "entusiasmo": 1,
+            "conhecimento": 0,
+            "relacionamento": 0
+        },
+        "opcao_2": {
+            "texto": "Honestamente não sei bem...",
+            "prox_tela": 1,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 0
+        }
+    },
+    {
+        "id": 1,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Imagino que esteja se sentindo ansioso.. é uma função muito importante! ",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 3,
+        "texto_padrao": "Sim.."
+    },
+    {
+        "id": 2,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Que bom! Tenho certeza que vai gostar da empresa, assim como eu..",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 3,
+        "texto_padrao": "Espero que sim"
+    },
+    {
+        "id": 3,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Falando nisso, a Julia já te falou sobre as suas atividades?",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Ainda não",
+            "prox_tela": 4,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 0
+        },
+        "opcao_2": {
+            "texto": "Quem é Julia?",
+            "prox_tela": 5,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        }
+    },
+    {
+        "id": 4,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Você será o profissional de qualidade da equipe dela. Estou me mudando nas \npróximas semanas, mas estou aqui pra te apoiar durante esse tempo",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 6,
+        "texto_padrao": "Ah, que legal!"
+    },
+    {
+        "id": 5,
+        "personagem": "otavio",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "É a desenvolvedora da sua equipe. Pensei que você soubesse disso..",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 6,
+        "texto_padrao": "Não sabia"
+    },
+    {
+        "id": 6,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Bom.. para aliviar um pouco da sua ansiedade, vou te contar sobre o papel \nde um Analista de Qualidade",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 7,
+        "texto_padrao": "Continuar"
+    },
+    {
+        "id": 7,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Controle e garantia de qualidade são atividades essenciais para qualquer \nnegócio que crie produtos para serem utilizados por outras pessoas. \n\nInclusive, o fator 'qualidade' é muito utilizado como estratégia de marketing \npara atrair e fidelizar clientes! ",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 8,
+        "texto_padrao": "Certo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 8,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Quando falamos sobre desenvolvimento de software, é importante que \npossamos garantir que estamos entregando uma aplicação que atenda às \nnecessidades do usuário. \n\nE, como você deve imaginar, essas necessidades são diversas! ",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 9,
+        "texto_padrao": "Certo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 9,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Em equipes que utilizam a metodologia ágil, é papel do product owner \nentender o que o usuário precisa. Os desenvolvedores, por sua vez, \ntransformam essa necessidade em código, em programas. \n\nE os analistas de qualidade?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 10,
+        "texto_padrao": "Eles testam o programa!",
+        "referencias": "pressman"
+    },
+    {
+        "id": 10,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Também! mas eles realizam outras atividades. \nVocê conseguiria me dizer quais são elas?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "jogo_adivinhar_funcao_qa",
+        "texto_padrao": "Continuar",
+        "referencias": "pressman"
+    },
+    {
+        "id": 11,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Certo! Os analistas de qualidade são responsáveis por planejar os testes e por \nrevisar a documentação também. Além disso, quando as coisas não saem \ncomo o esperado, ele deve reportar esse comportamento á equipe. ",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 13,
+        "texto_padrao": "Continuar",
+        "referencias": "pressman"
+    },
+    {
+        "id": 12,
+        "personagem": "otavio",
+        "emocao": "sad_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Não exatamente... codificar a aplicação é atividade do desenvolvedor, e \nescolher o que deve ser entregue é papel do responsável pelo negócio.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 13,
+        "texto_padrao": "Continuar",
+        "referencias": "pressman"
+    },
+    {
+        "id": 13,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_night",
+        "texto": "É.. está ficando tarde. Vou indo nessa, amanhã vai ser um dia bem importante \npara você.\n\nMas antes de eu ir, você tem alguma pergunta para mim?",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Você acha que eu estou pronto para começar?",
+            "prox_tela": 14,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 0
+        },
+        "opcao_2": {
+            "texto": "O que você está fazendo no meu quarto?",
+            "prox_tela": 15,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        }
+    },
+    {
+        "id": 14,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_night",
+        "texto": "Está sim. Você tem coisas a aprender, mas deve dar conta.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_transicao_1",
+        "texto_padrao": "Continuar",
+        "referencias": "pressman"
+    },
+    {
+        "id": 15,
+        "personagem": "otavio",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_night",
+        "texto": "É.. bom.. preciso ir, até mais.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_transicao_1",
+        "texto_padrao": "Continuar",
+        "referencias": "pressman"
+    },
+    {
+        "id": 16,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Olha, olha quem está aqui! Se não é você!",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Bom dia!",
+            "prox_tela": 17,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 0
+        },
+        "opcao_2": {
+            "texto": "Você parece animada..",
+            "prox_tela": 18,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+        }
+    },
+    {
+        "id": 17,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Bom, vou te apresentar o projeto que estamos trabalhando agora..",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 23,
+        "texto_padrao": "Continuar",
+        "referencias": "pressman"
+    },
+    {
+        "id": 18,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Estou sim.. desde que o Otávio resolveu sair, estamos enfrentando problemas \ncom a qualidade das nossas entregas.\n\nVocê já ouviu falar em 'viés de confirmação'?",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Acho que não tenho interesse em saber..",
+            "prox_tela": 17,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        },
+        "opcao_2": {
+            "texto": "Você poderia me contar sobre?",
+            "prox_tela": 19,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+        }
+    },
+    {
+        "id": 19,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Vou dar um exemplo.. Imagine que você tem um amigo que criou um jogo de \ncomputador. \n\nEsse amigo passou muito tempo trabalhando no jogo, escrevendo todas as \ninstruções para que ele funcione corretamente...",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 20,
+        "texto_padrao": "Certo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 20,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Agora, seu amigo quer ter certeza de que o jogo está bom e sem problemas \nantes de outras pessoas jogarem. \n\nAqui está o problema: quando alguém faz algo, como criar um jogo, pode ser \ndifícil ver os erros ou problemas que existem nele",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 21,
+        "texto_padrao": "E por que isso acontece?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 21,
+        "personagem": "julia",
+        "emocao": "sad_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Isso acontece porque a pessoa que criou o jogo sabe como ele deveria \nfuncionar e pode acabar ignorando coisas que estão erradas. \n\nOutras pessoas testarem o jogo é importante porque elas podem encontrar \nproblemas que o criador não viu.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 22,
+        "texto_padrao": "Entendi, esse é o papel do Analista de Qualidade então!",
+        "referencias": "pressman"
+    },
+    {
+        "id": 22,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Exatamente! Ele tem uma visão com menos vieses porque não conhece \no código, conhece apenas o comportamento esperado. \n\nLegal, né?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 17,
+        "texto_padrao": "Sim!",
+        "referencias": "pressman"
+    },
+    {
+        "id": 23,
+        "personagem": "pedro",
+        "emocao": "angry_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Com licença, mas acho que esse é o meu papel!",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 24,
+        "texto_padrao": "Quem é você?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 24,
+        "personagem": "pedro",
+        "emocao": "angry_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Eu? Como assim quem sou eu? O Pedro, o responsável pelo negócio..",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 25,
+        "texto_padrao": "Certo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 25,
+        "personagem": "julia",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "...",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 26,
+        "texto_padrao": "...",
+        "referencias": "pressman"
+    },
+    {
+        "id": 26,
+        "personagem": "pedro",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Aparentemente você já deve ter percebido, mas enfrentamos alguns \nproblemas de comunicação aqui na Jogos Dourados. \n\nMas enfim, vamos ao que interessa.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 27,
+        "texto_padrao": "Certo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 27,
+        "personagem": "pedro",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Vamos lá.. estamos trabalhando nesse jogo, chamado 'Jogo da Memória'. \nNele, o jogador deve combinar duas figuras semelhantes \npara fazer pontos.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 28,
+        "texto_padrao": "Certo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 28,
+        "personagem": "pedro",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Estamos na fase final do planejamento. Os requisitos devem estar prontos \namanhã. Enquanto isso, o Otávio enviou um desafio para você ir treinando. \nVamos lá?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "jogar_minigame_otavio",
+        "texto_padrao": "Vamos!",
+        "referencias": "pressman"
+    },
+    {
+        "id": 29,
+        "personagem": "pedro",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Parece que você realmente está pronto para o trabalho, hein?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 31,
+        "texto_padrao": "Obrigado!",
+        "referencias": "pressman"
+    },
+    {
+        "id": 30,
+        "personagem": "pedro",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Parece que você ainda tem alguns pontos a melhorar, não é mesmo?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 31,
+        "texto_padrao": "Tenho sim..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 31,
+        "personagem": "pedro",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Estou ansioso para saber como vai se sair amanhã. \nPor hoje, é isso. Recomendo que fale com o Otavio, ele tem algumas dicas legais para te \npassar.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_animacao_dormitorio",
+        "texto_padrao": "Certo, vou lá.",
+        "referencias": "pressman"
+    },
+    {
+        "id": 32,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Olá! Soube que respondeu ao meu desafio.. o que achou dele? ",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Achei fácil",
+            "prox_tela": 33,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        },
+        "opcao_2": {
+            "texto": "Achei difícil",
+            "prox_tela": 34,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+        }
+    },
+    {
+        "id": 33,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "A ideia é que você se acostume cada vez mais com os conceitos.. Gosto de ver a sua evolução",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 35,
+        "texto_padrao": "Entendo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 34,
+        "personagem": "otavio",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Talvez você devesse se esforçar mais.. está tudo na sua cabeça!",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 35,
+        "texto_padrao": "...",
+        "referencias": "pressman"
+    },
+    {
+        "id": 35,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Mas vamos lá.. já que você está aqui, eu quero te explicar a diferença entre o \nuso de técnicas de teste estáticas e testes dinâmicas.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 36,
+        "texto_padrao": "Estáticas e dinâmicas?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 36,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Exatamente... é um erro comum pensar que apenas arquivos executáveis \npodem ser testados. Na realidade, os testes podem (e devem!) começar bem antes. \n\nDá uma olhada nesse resumo que eu fiz especialmente pra você:",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "abrir_livro_otavio",
+        "texto_padrao": "Deixe-me ver!",
+        "referencias": "pressman"
+    },
+
+    {
+        "id": 37,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Importante ressaltar que essas técnicas são complementares, OK? Elas são \ncapazes de encontrar tipos de defeitos diferentes, por isso é ideal que sejam \nutilizadas em conjunto.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 38,
+        "texto_padrao": "Entendido",
+        "referencias": "pressman"
+    },
+    {
+        "id": 38,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Enfim, era isso que eu gostaria de repassar com você hoje. Antes de ir, você \ntem alguma pergunta para mim?",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Por que você resolveu sair do time?",
+            "prox_tela": 39,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        },
+        "opcao_2": {
+            "texto": "A Jogos Dourados só tem três funcionários?",
+            "prox_tela": 41,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+            
+        }
+    },
+    {
+        "id": 39,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Eu estou fundando minha própria empresa de qualidade! \nInclusive, você sabe.. caso não esteja gostando da Jogos Dourados... ",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Isso é um pouco antiético, não??",
+            "prox_tela": 40,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        },
+        "opcao_2": {
+            "texto": "Ah, obrigada pelo convite.. pensarei com carinho sobre ele.",
+            "prox_tela": 40,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+            
+        }
+    },
+    {
+        "id": 40,
+        "personagem": "otavio",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Bem, preciso ir. Afinal, meu tempo é valioso - inclusive, eu acho que deveria \ncomeçar a cobrar por ele..",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_transicao_dia_seguinte",
+        "texto_padrao": "Nos vemos depois então.",
+        "referencias": "pressman"
+    },
+    {
+        "id": 41,
+        "personagem": "otavio",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Ah não, claro que não! Você faz parte de uma equipe pequena, mas existem \noutros alunos atuando em diferentes projetos.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 40,
+        "texto_padrao": "Certo, entendi.",
+        "referencias": "pressman"
+    },
+    {
+        "id": 42,
+        "personagem": "pedro",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Bom dia! É muito bom ter você aqui hoje com a gente",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 43,
+        "texto_padrao": "Bom dia",
+        "referencias": "pressman"
+    },
+    {
+        "id": 43,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Sim, estamos muito felizes. Parece que alguém vai ter seu trabalho posto à prova, não é mesmo?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 44,
+        "texto_padrao": "Vocês vão avaliar o meu trabalho?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 44,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Claro que não! Estou falando do trabalho do Pedro. Ontem ele terminou o levantamento de requisitos, e fizemos uma aposta.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 45,
+        "texto_padrao": "Que aposta?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 45,
+        "personagem": "pedro",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Eu não apostei nada com ninguém, Julia.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 46,
+        "texto_padrao": "Não estou entendendo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 46,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Bom, basicamente, eu apostei que existem ao menos três erros nos \nrequisitos funcionais que ele levantou. Baseei esse número na quantidade \nde vezes que passamos vergonha com o cliente no último mês.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 47,
+        "texto_padrao": "Isso é preocupante.",
+        "referencias": "pressman"
+    },
+    {
+        "id": 47,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "E é mesmo! Mas sua presença aqui vai nos ajudar a evitar passar por isso. \nEssa é sua tarefa hoje.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 48,
+        "texto_padrao": "Certo..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 48,
+        "personagem": "pedro",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "A verdade é que ela está ansiosa para ver o meu trabalho sendo avaliado, só \nisso. ",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 49,
+        "texto_padrao": "Sim, parece isso mesmo",
+        "referencias": "pressman"
+    },
+    {
+        "id": 49,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Bom, chega de enrolação, Pedro! Para avaliar os requisitos, é necessário que \nvocê conheça alguns erros que podem ser cometidos quando se escreve esse \ntipo de documentação.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 50,
+        "texto_padrao": "Que erros são esses?",
+        "referencias": "pressman"
+    },
+
+    {
+        "id": 50,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Para responder sua pergunta, vamos ver o que 'alguém' deixou escrito na lousa \nontem!",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_lousa_requisitos_funcionais",
+        "texto_padrao": "Estou indo",
+        "referencias": "pressman"
+    },
+    {
+        "id": 51,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Importante lembrar que as especificações nada mais são do que o acordo \nentre o cliente e o negócio. Temos que ter certeza que as \nentendemos bem, e que seremos capazes de cumprir esse acordo.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 52,
+        "texto_padrao": "Entendi! E onde estão esses requistos?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 52,
+        "personagem": "pedro",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Eles estão bem aqui!",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 53,
+        "texto_padrao": "Certo.. e quando eu começo?",
+        "referencias": "pressman"
+    },
+    
+    {
+        "id": 53,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Você pode começar agora!",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "jogar_desafio_requisitos_funcionais",
+        "texto_padrao": "Vamos lá!",
+        "referencias": "pressman"
+    },
+    {
+        "id": 54,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Você se saiu muito bem, hein?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 55,
+        "texto_padrao": "Obrigada! Consegui aplicar o que aprendi com vocês.",
+        "referencias": "pressman"
+    },
+    {
+        "id": 55,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Isso é importante, saber aplicar o conhecimento adquirido. O Otavio vai ficar \norgulhoso..",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Tenho certeza que vai sim!",
+            "prox_tela": 56,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        },
+        "opcao_2": {
+            "texto": "Talvez ele fique, eu não sei...",
+            "prox_tela": 57,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+            
+        }
+
+
+    },
+
+    {
+        "id": 56,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Bom.. eu acho que você pode seguir para a próxima etapa.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 60,
+        "texto_padrao": "Qual etapa?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 57,
+        "personagem": "julia",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Ele com certeza vai se orgulhar. Inclusive, foi ele quem te \nindicou para essa posição, você sabia?",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Não sabia não!",
+            "prox_tela": 58,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        },
+        "opcao_2": {
+            "texto": "Eu já tinha imaginado..",
+            "prox_tela": 58,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+            
+        }
+    },
+
+    {
+        
+            "id": 58,
+            "personagem": "julia",
+            "emocao": "happy_d",
+            "posicao": {
+                "x": 220,
+                "y": 500
+            },
+            "fundo": "school",
+            "texto": "Pois é.. Ele viu bastante potencial em você, e eu estou vendo que ele \nestava certo",
+            "visivel": true,
+            "dialogoInterativo": false,
+            "prox_tela": 56,
+            "texto_padrao": "Fico contente em saber disso, Julia.",
+            "referencias": "pressman"
+        
+    },
+
+    {
+        "id": 59,
+        "personagem": "pedro",
+        "emocao": "sad_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Parece que você teve algumas dificuldades, não é mesmo?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 56,
+        "texto_padrao": "Sim, eu tive sim..",
+        "referencias": "pressman"
+    },
+    {
+        "id": 60,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Os testes dinâmicos. Você vai ver a aplicação em funcionamento.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 61,
+        "texto_padrao": "E como funciona esse teste?",
+        "referencias": "pressman"
+    },
+    {
+        "id": 61,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Em breve, teremos uma aplicação funcional. Você deve ver, \nentão, se ela atende aos requisitos que te \napresentamos hoje.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 62,
+        "texto_padrao": "Entendi",
+        "referencias": "pressman"
+    },
+    {
+        "id": 62,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Precisamos terminar algumas coisas, então durante essa semana \nvocê pode estudar um pouco mais.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_transicao_2",
+        "texto_padrao": "Nos vemos em breve, então.",
+        "referencias": "pressman"
+    },
+    {
+        "id": 63,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Olá! Tem algum tempo que não nos vemos, não é mesmo?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 64,
+        "texto_padrao": "Sim, tem sim"
+    },
+    {
+        "id": 64,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Bom, a Julia me contou que terminou a codificação da aplicação, e \nvocê vai realizar os testes dinâmicos",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 65,
+        "texto_padrao": "Exatamente"
+    },
+    {
+        "id": 65,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Antes disso, gostaria de te falar um pouco mais sobre as técnicas dinâmicas",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 66,
+        "texto_padrao": "Certo"
+    },
+    {
+        "id": 66,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Como você mesmo constatou, a documentação que o Pedro escreveu tinha \nalguns erros e os testes estáticos foram importantes para identifica-los. \nEntretanto, precisamos saber se a Julia foi capaz de \ncodificar corretamente o jogo",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 67,
+        "texto_padrao": "E como faremos isso?"
+    },
+    {
+        "id": 67,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Primeiramente, quero que você leia novamente os requisitos \nfuncionais do jogo. Está aqui a versão corrigida. ",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_documentacao_corrigida",
+        "texto_padrao": "Deixe-me ver."
+    },
+    {
+        "id": 68,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Você conseguiu perceber as correções feitas?",
+        "visivel": true,
+        "dialogoInterativo": true,
+        "altera_status": true,
+        "opcao_1": {
+            "texto": "Sim, eu percebi",
+            "prox_tela": 70,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": -1
+        },
+        "opcao_2": {
+            "texto": "Não consegui identificá-las",
+            "prox_tela": 69,
+            "entusiasmo": 0,
+            "conhecimento": 0,
+            "relacionamento": 1
+            
+        }
+    },
+    {
+        "id": 69,
+        "personagem": "otavio",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "O primeiro requisito agora está completo, ele fala sobre o tabuleiro do jogo.\nO último requisito também foi modificado, e ele fala sobre o fim do jogo.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 70,
+        "texto_padrao": "Agora ficou claro para mim"
+    },
+
+
+
+    {
+        "id": 70,
+        "personagem": "otavio",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "bedroom_day",
+        "texto": "Sendo assim, acho que você pode seguir para a faculdade. \nA Julia está te esperando lá, para realizar os testes.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_transicao_faculdade",
+        "texto_padrao": "Vou lá."
+    },
+
+    {
+        "id": 71,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Bem vindo de volta! Espero que esteja animado, pois temos uma \naplicação para testar.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 72,
+        "texto_padrao": "Eu me sinto pronto"
+    },
+    {
+        "id": 72,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Ótimo, então vou te explicar como vai funcionar o teste. Você vai ter acesso ao \njogo e pode interagir com ele. Nessa fase de testes, as cartas estão na mesma \nposição, então você saberá com o tempo onde estão todos os pares.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 73,
+        "texto_padrao": "Certo..."
+    },
+    {
+        "id": 73,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Dada nossa limitação de tempo, você poderá reiniciar apenas três vezes o jogo. \nAo final dessas três vezes, vamos conversar sobre os seus achados.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 74,
+        "texto_padrao": "Entendi."
+    },
+    {
+        "id": 74,
+        "personagem": "pedro",
+        "emocao": "happy_d",
+        "posicao": {
+            "x": 220,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Pois é, quem será que vai ter o trabalho posto a prova agora, não é mesmo?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 75,
+        "texto_padrao": "Sim.."
+    },
+    {
+        "id": 73,
+        "personagem": "julia",
+        "emocao": "angry_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Não vou dizer nada.. Pode começar, estou curiosa pelo resultado.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "jogar_teste_dinamico",
+        "texto_padrao": "Vou começar"
+    },
+    {
+        "id": 74,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Parece que terminamos por aqui, não é mesmo?",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 75,
+        "texto_padrao": "Sim, eu terminei"
+    },
+    {
+        "id": 75,
+        "personagem": "julia",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Hora de nos contar o que você encontrou!",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "reportar_bugs",
+        "texto_padrao": "Sim, eu terminei"
+    },
+    {
+        "id": 76,
+        "personagem": "pedro",
+        "emocao": "happy_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Parabéns! Você encontrou todos os defeitos da aplicação",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 81,
+        "texto_padrao": "Sério? Que legal"
+    },
+    {
+        "id": 77,
+        "personagem": "pedro",
+        "emocao": "sad_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Eu acho que você não conseguiu identificar todos os defeitos..",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 80,
+        "texto_padrao": "Por que você acha isso?"
+    },
+    {
+        "id": 78,
+        "personagem": "pedro",
+        "emocao": "sad_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Haviam dois bugs na aplicação (segundo o Otavio): na mensagem de \nvitoria e os cartoes continuavam clicáveis (quando não deveriam) após o final.",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": 81,
+        "texto_padrao": "Ah, entendi!"
+    },
+    {
+        "id": 79,
+        "personagem": "pedro",
+        "emocao": "sad_e",
+        "posicao": {
+            "x": 900,
+            "y": 500
+        },
+        "fundo": "school",
+        "texto": "Bom, eu acho que finalizamos por aqui.. \nTe retornaremos em breve, com os resultados da sua semana aqui",
+        "visivel": true,
+        "dialogoInterativo": false,
+        "prox_tela": "exibir_cena_transicao_dia_seguinte",
+        "texto_padrao": "Ah, entendi!"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+]

@@ -1,0 +1,72 @@
+Enredo: 
+
+Pedro, Julia e Otávio são estudantes do curso de Tecnologia da Informação que resolvem abrir seu próprio negócio juntos. A "Jogos Dourados", empresa
+fundada e gerida pelos três amigos, seleciona, testa, adquire e publica jogos de computador desenvolvidos por outras pessoas. Basicamente,
+eles pagam um valor pelo direito de comercialização dos jogos e lucram com sua venda para o consumidor final.
+Apesar da ideia ser muito boa, a empresa enfrenta um problema no momento de aquisição dos jogos: alguns deles possuem muitos bugs! Se esses
+jogos forem entregues aos clientes da maneira que vieram, poderão causar mais problemas. Por outro lado, a correção dos bugs pode levar muito
+tempo e não compensar o esforço necessário financeiramente. Por essa razão, o papel do testador, do Pedro, é muito importante: é ele quem vai buscar os
+bugs e reportar para a Julia, a responsável técnica do projeto. Para que consiga desempenhar bem sua função, Pedro estuda todas as noites
+e aprende conceitos de teste importantes antes de ir para a faculdade, onde vai se encontrar com seus colegas e receber novas tarefas.
+
+
+Personagens:
+
+Pedro (jogador) - assume a função de testar os jogos adquiridos e avaliar se estão aptos para serem publicados
+Julia - realiza pequenas correções quando necessário e publica os jogos na plataforma da empresa
+Otavio - realiza o contato com os desenvolvedores independentes e toma conta da parte administrativa da empresa
+
+Ambientes:
+
+Quarto do Pedro - Onde o jogador aprende sobre os conceitos de teste, estudando o material disponibilizado pela sua professora de Testes
+Sala de convivência - Onde os jogos são testados e o jogador recebe feedbacks de seus colegas (sobre a quantidade de bugs encontrados - Julia, 
+e sobre o potencial lucro/prejuízo do jogo entregue - Otávio)
+
+Itens:
+Relógio - Quanto mais bugs reportados em menos tempo, maior a pontuação.
+Dinheiro - O caixa começa com 100 reais. Jogos bem sucedidos (entregues sem ou com 1 bug não encontrado) garantem um lucro de 50 reais para a empresa.
+Jogos entregues com 2 ou 3 bugs não dão lucro. Jogos com mais de 3 bugs não reportados geram um prejuízo de 50 reais.
+
+
+Roteiro
+Pedro feliz no quarto - "Nossa, não consigo acreditar! Amanhã vou testar o meu primeiro jogo na Jogos Dourados"
+"Parece que foi ontem que tivemos a ideia de abrir o nosso negócio"
+"Não acreditei muito quando a Julia disse que tinha uma ideia para ganharmos dinheiro"
+Imagem Julia feliz - "É simples", ela disse, "Soube que alguns alunos da faculdade desenvolvem jogos, mas não conseguem publicar e ganhar dinheiro com eles"
+"Então, pensei que seria uma boa ideia se comprassemos esses jogos deles e publicassemos nós mesmos.."
+"O Otávio é muito bom com finanças, e ele está interessado em cuidar da parte administrativa do negócio"
+"Eu sou uma boa desenvolvedora, posso criar nossa própria plataforma para distribuir os games"
+"E você, Pedro, vai ser o responsável por garantir que a gente não saia vendendo jogos ruins.. precisamos achar os bugs e corrigi-los antes
+do publicar no nosso site"
+"Você acha que você dá conta?"
+"C-c-laro, dou sim.."
+"Ótimo! Toma aqui esse livro... andei pesquisando e acho que ele pode te ajudar bastante! Vamos precisar seguir algumas regras, mas tenho certeza
+que você aprende rápido"
+
+*Imagem livro - "Guia do Testador das Galáxias"*
+
+Pedro triste no quarto - "Bom.. e cá estou eu, pronto para começar os trabalhos"
+
+Texto na tela (Narrador) "Seja bem vindo ao NOME_DO_JOGO! Aqui, você vai acompanhar o Pedro e seus amigos na Jogos Dourados, o novo negócio de compra e venda
+de jogos eletrônicos!"
+"Você deve procurar bugs nos jogos e reportá-los para o seu time. Esses bugs serão corrigidos antes que o jogo seja publicado"
+"Para ajudar no seu trabalho, antes de cada dia de trabalho, você aprenderá sobre novos conceitos de testes. Esses conceitos são importantes
+para melhorar o seu trabalho e, com isso, aumentar a confiança dos clientes na sua empresa"
+"O jogo funciona em um ciclo, dividido em etapas:"
+
+Na primeira etapa, você deve ler um novo capítulo do Guia do Testador das Galaxias
+Na segunda etapa, você receberá informações sobre o jogo que deve ser testado
+Na terceira etapa, você vai jogar o jogo e buscar os bugs
+Na quarta etapa, você vai assinalar todos os bugs encontrados e enviar para a Júlia
+Por fim, na quinta etapa, você vai receber o feedback sobre sua entrega e a quantidade de pontos obtidos:
+
+- Se todos os bugs forem encontrados, você recebe 50 pontos!
+- Se você encontrar pelo menos metade dos bugs presentes, mas deixar passar outros, você recebe 25 pontos
+- se você não localizar nenhum bug corretamente, você não pontua
+
+Ah! Tem algumas regras importantes:
+
+- Tempo é dinheiro. Portanto, o relógio no canto da tela vai indicar quanto tempo você ainda tem para testar o jogo.
+Se você ultrapassar o tempo necessário, vai ter um decréscimo nos pontos. Por outro lado, se conseguir achar todos os bugs em menos de 60 segundos,
+você vai ganhar um bonus de pontos por sua produtividade
+
