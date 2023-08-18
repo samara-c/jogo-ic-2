@@ -1566,9 +1566,10 @@ class Level extends Phaser.Scene {
 
             btn_continuar.on('pointerdown', () => {
 
+                this.input.setDefaultCursor('default');
+
                 if (desafio_pergunta < 4) {
 
-                    btn_continuar.removeAllListeners();
                     resolverDesafioOtavio(desafio_pergunta);
 
                 } else if (pontos_pergunta > 2) {
