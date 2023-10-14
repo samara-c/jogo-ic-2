@@ -11,12 +11,53 @@ class Game {
                     gravity: { y: 0 }
                 }
             },
-            scene: [Level]
+            scene: [Menu, Level]
         };
 
         this.game = new Phaser.Game(config);
     }
 }
+
+class Menu extends Phaser.Scene {
+    constructor() {
+      super({ key: 'menu' });
+    }
+    
+    preload() {
+
+        this.load.image('menu_main', 'img/menu_files/menu_main.png');
+        this.load.image('iniciar_jogo_btn', 'img/menu_files/iniciar_jogo_btn.png');
+        
+
+    }
+
+    create() {
+        var centerX = this.cameras.main.width / 2;
+        var centerY = this.cameras.main.height / 1.9;
+        var menu_main = this.add.image(centerX, centerY-18, 'menu_main');
+        var iniciar_jogo_btn = this.add.image(centerX, centerY+100, 'iniciar_jogo_btn');
+        iniciar_jogo_btn.setInteractive();
+
+        iniciar_jogo_btn.on('pointerover', () => {
+            iniciar_jogo_btn.setScale(1.1);
+            this.input.setDefaultCursor('pointer');
+        });
+
+        iniciar_jogo_btn.on('pointerout', () => {
+            iniciar_jogo_btn.setScale(1);
+            this.input.setDefaultCursor('default');
+        });
+
+        iniciar_jogo_btn.on('pointerdown', () => {
+
+            this.input.setDefaultCursor('default');
+            menu_main.destroy();
+            iniciar_jogo_btn.destroy();
+            this.scene.start('level'); // Inicie o estado do jogo quando o botão for clicado.
+        });
+      
+     }
+    }
 
 class Level extends Phaser.Scene {
     constructor() {
@@ -81,12 +122,14 @@ class Level extends Phaser.Scene {
         this.load.image('email_2', 'img/msg/email_2.png');
         this.load.image('email_3', 'img/msg/email_3.png');
         this.load.image('intro_pdf', 'img/msg/intro_pdf.png');
+        this.load.image('primeiro_email', 'img/msg/primeiro_email.png');
 
         // Pré-carregar botoes
         this.load.image('botao_anexo', 'img/buttons/anexo_1.png');
         this.load.image('continuar_btn', 'img/buttons/continuar_btn.png');
         this.load.image('continuar_btn_formatado', 'img/buttons/continuar_btn_2.png');
         this.load.image('verificar_btn', 'img/buttons/verificar_btn.png');
+        this.load.image('abrir_btn', 'img/buttons/botao_abrir.png');
 
         //Pré-carregar imagens utilizadas nos games
 
@@ -171,7 +214,7 @@ class Level extends Phaser.Scene {
 
         // Variável para definir posição da caixa de texto de dialogo
         const pos_x_caixa_texto_personagens = 110;
-        const pos_y_caixa_texto_personagens = 90;
+        const pos_y_caixa_texto_personagens = 100;
 
         // Variavel para definir tamanho caixa de texto book
         const tam_x_caixa_texto_book = 900;
@@ -201,9 +244,12 @@ class Level extends Phaser.Scene {
 
 
             const background = this.add.image(560, 340, 'laptop_fundo');
+            var escala_botao = 1;
 
-            var email_1 = this.add.image(centerX, centerY, 'email_1');
+            var email_1 = this.add.image(centerX, centerY, 'primeiro_email');
+            var abrir_btn = this.add.image(centerX, centerY + 75, 'abrir_btn');
             email_1.setScale(0); // Define o tamanho inicial como 0
+            abrir_btn.alpha = 0;
 
             this.tweens.add({
                 targets: email_1,
@@ -212,16 +258,29 @@ class Level extends Phaser.Scene {
                 duration: 1000, // Duração da animação em milissegundos (2 segundos neste exemplo)
                 ease: 'Linear',
                 onComplete: function () {
-
-                    email_1.setInteractive();
+                    abrir_btn.alpha = 1;
+                    abrir_btn.setInteractive();
                 }
             });
 
-            email_1.on('pointerdown', () => {
+            abrir_btn.on('pointerover', () => {
+                abrir_btn.setScale(escala_botao + 0.1);
+                this.input.setDefaultCursor('pointer');
+            });
+
+            abrir_btn.on('pointerout', () => {
+                abrir_btn.setScale(escala_botao);
+                this.input.setDefaultCursor('default');
+            });
+
+            abrir_btn.on('pointerdown', () => {
                 // Função para abrir a caixa de texto
+                this.input.setDefaultCursor('default');
+                abrir_btn.destroy();
                 email_1.destroy();
                 background.destroy();
                 carregarEmailsDeBoasVindas();
+
 
             });
 
@@ -507,11 +566,12 @@ class Level extends Phaser.Scene {
             var botao_anexo;
             const background = this.add.image(560, 340, 'laptop_fundo');
             var botao_visivel = false;
+            var escala_botao = 0.6;
 
             var email_3 = this.add.image(centerX, centerY, 'email_3');
             email_3.alpha = 0;
 
-            botao_anexo = this.add.image(400, 360, 'botao_anexo').setScale(0.6);
+            botao_anexo = this.add.image(420, 410, 'botao_anexo');
             botao_anexo.alpha = 0;
 
             this.tweens.add({
@@ -528,8 +588,17 @@ class Level extends Phaser.Scene {
                 }
             });
 
+            botao_anexo.on('pointerover', () => {
+                this.input.setDefaultCursor('pointer');
+            });
+
+            botao_anexo.on('pointerout', () => {
+                this.input.setDefaultCursor('default');
+            });
+
             botao_anexo.on('pointerdown', () => {
                 // Função para abrir a caixa de texto
+                this.input.setDefaultCursor('default');
                 botao_anexo.destroy();
                 background.destroy();
                 email_3.destroy();
@@ -550,10 +619,10 @@ class Level extends Phaser.Scene {
             const background = this.add.image(560, 340, 'laptop_fundo');
             var continuar_btn;
 
-            var intro_pdf = this.add.image(centerX, centerY, 'intro_pdf');
+            var intro_pdf = this.add.image(centerX, centerY + 50, 'intro_pdf');
             intro_pdf.alpha = 0;
 
-            continuar_btn = this.add.image(centerX, centerY + 340, 'continuar_btn').setScale(0.8);
+            continuar_btn = this.add.image(centerX, centerY + 190, 'continuar_btn_formatado').setScale(0.8);
             continuar_btn.alpha = 0;
 
             this.tweens.add({
@@ -578,6 +647,16 @@ class Level extends Phaser.Scene {
 
             });
 
+            continuar_btn.on('pointerover', () => {
+                continuar_btn.setScale(0.9);
+                this.input.setDefaultCursor('pointer');
+            });
+
+            continuar_btn.on('pointerout', () => {
+                continuar_btn.setScale(0.8);
+                this.input.setDefaultCursor('default');
+            });
+
             construirHUD();
 
         }
@@ -597,6 +676,7 @@ class Level extends Phaser.Scene {
             const altura_texto = 300;
             var resultado = ' ';
             var personagem_secundario;
+            var pode_clicar = false;
 
 
             const personagemNome = tela.personagem;
@@ -649,9 +729,19 @@ class Level extends Phaser.Scene {
 
 
 
-            const textBoxName = this.add.text(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens - tam_y_caixa_texto_personagens / 5, personagemNomeFormatado, {
+
+
+
+            // Criar borda da caixa de texto do nome do personagem
+            const textBoxNameBorder = this.add.graphics();
+            textBoxNameBorder.lineStyle(2, 0x603913); // Marrom escuro
+            textBoxNameBorder.fillRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens - tam_y_caixa_texto_personagens / 6, tam_x_caixa_texto_personagens / 6, tam_y_caixa_texto_personagens / 6, 10);
+            textBoxNameBorder.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens - tam_y_caixa_texto_personagens / 6, tam_x_caixa_texto_personagens / 6, tam_y_caixa_texto_personagens / 6, 10);
+
+
+            const textBoxName = this.add.text(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens - tam_y_caixa_texto_personagens / 5, personagemNomeFormatado + " diz:", {
                 fontFamily: 'Arial',
-                fontSize: '24px',
+                fontSize: '20px',
                 fontWeight: 'bold',
                 color: '#000000',
             });
@@ -659,11 +749,6 @@ class Level extends Phaser.Scene {
             // Definir estilo da caixa de texto do nome do personagem
             textBoxName.setPadding({ left: 30, right: 30, top: 10, bottom: 10 });
             textBoxName.setFixedSize(tam_x_caixa_texto_personagens / 6, tam_y_caixa_texto_personagens / 6);
-
-            // Criar borda da caixa de texto do nome do personagem
-            const textBoxNameBorder = this.add.graphics();
-            textBoxNameBorder.lineStyle(2, 0x603913); // Marrom escuro
-            textBoxNameBorder.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens - tam_y_caixa_texto_personagens / 6, tam_x_caixa_texto_personagens / 6, tam_y_caixa_texto_personagens / 6, 10);
 
             personagem = this.add.image(tela.posicao.x, tela.posicao.y, `${tela.personagem}_${tela.emocao}`).setScale(0.7);
             personagem.alpha = 0;
@@ -679,7 +764,7 @@ class Level extends Phaser.Scene {
 
                     onComplete: function () {
 
-                        personagem.setInteractive();
+                        iniciaInteracao();
 
                     }
                 });
@@ -697,7 +782,7 @@ class Level extends Phaser.Scene {
 
                         onComplete: function () {
 
-                            personagem_secundario.setInteractive();
+
 
                         }
                     });
@@ -709,122 +794,125 @@ class Level extends Phaser.Scene {
 
             } // Habilitar interação com o personagem
 
-            if (tela.dialogoInterativo) {
+            const iniciaInteracao = () => {
 
-                const textBox_opcao_1 = this.add.graphics();
-                textBox_opcao_1.fillStyle(0xFFFFFF, 0.95); //seta a tranparencia da caixa de texto aqui
-                textBox_opcao_1.fillRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 440, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
-                textBox_opcao_1.setInteractive();
-                opcao_1 = this.add.text(pos_x_caixa_texto_personagens + 30, pos_y_caixa_texto_personagens + 450, tela.opcao_1.texto, { fontFamily: 'Arial', fontSize: '24px', fill: '#000' });
-                opcao_1.setInteractive();
+                if (tela.dialogoInterativo) {
+                    const textBox_opcao_1 = this.add.graphics();
+                    textBox_opcao_1.fillStyle(0xFFFFFF, 0.95); //seta a tranparencia da caixa de texto aqui
+                    textBox_opcao_1.fillRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 440, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
+                    textBox_opcao_1.setInteractive();
+                    opcao_1 = this.add.text(pos_x_caixa_texto_personagens + 30, pos_y_caixa_texto_personagens + 450, tela.opcao_1.texto, { fontFamily: 'Arial', fontSize: '24px', fill: '#000' });
+                    opcao_1.setInteractive();
 
-                const textBoxBorder_opcao_1 = this.add.graphics();
-                textBoxBorder_opcao_1.lineStyle(2, 0x603913);
-                textBoxBorder_opcao_1.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 440, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
 
-                const textBox_opcao_2 = this.add.graphics();
-                textBox_opcao_2.fillStyle(0xFFFFFF, 0.95); //seta a tranparencia da caixa de texto aqui
-                textBox_opcao_2.fillRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 500, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
-                textBox_opcao_2.setInteractive();
-                opcao_2 = this.add.text(pos_x_caixa_texto_personagens + 30, pos_y_caixa_texto_personagens + 510, tela.opcao_2.texto, { fontFamily: 'Arial', fontSize: '24px', fill: '#000' });
-                opcao_2.setInteractive();
+                    const textBoxBorder_opcao_1 = this.add.graphics();
+                    textBoxBorder_opcao_1.lineStyle(2, 0x603913);
+                    textBoxBorder_opcao_1.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 440, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
 
-                const textBoxBorder_opcao_2 = this.add.graphics();
-                textBoxBorder_opcao_2.lineStyle(2, 0x603913);
-                textBoxBorder_opcao_2.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 500, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
+                    const textBox_opcao_2 = this.add.graphics();
+                    textBox_opcao_2.fillStyle(0xFFFFFF, 0.95); //seta a tranparencia da caixa de texto aqui
+                    textBox_opcao_2.fillRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 500, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
+                    textBox_opcao_2.setInteractive();
+                    opcao_2 = this.add.text(pos_x_caixa_texto_personagens + 30, pos_y_caixa_texto_personagens + 510, tela.opcao_2.texto, { fontFamily: 'Arial', fontSize: '24px', fill: '#000' });
+                    opcao_2.setInteractive();
 
-                opcao_1.on('pointerover', () => {
-                    opcao_1.setScale(1.1);
-                    this.input.setDefaultCursor('pointer');
-                });
+                    const textBoxBorder_opcao_2 = this.add.graphics();
+                    textBoxBorder_opcao_2.lineStyle(2, 0x603913);
+                    textBoxBorder_opcao_2.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 500, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
 
-                opcao_1.on('pointerout', () => {
-                    opcao_1.setScale(1.0);
-                    this.input.setDefaultCursor('default');
-                });
+                    opcao_1.on('pointerover', () => {
+                        opcao_1.setScale(1.1);
+                        this.input.setDefaultCursor('pointer');
+                    });
 
-                opcao_2.on('pointerover', () => {
-                    opcao_2.setScale(1.1);
-                    this.input.setDefaultCursor('pointer');
-                });
+                    opcao_1.on('pointerout', () => {
+                        opcao_1.setScale(1.0);
+                        this.input.setDefaultCursor('default');
+                    });
 
-                opcao_2.on('pointerout', () => {
-                    opcao_2.setScale(1.0);
-                    this.input.setDefaultCursor('default');
-                });
+                    opcao_2.on('pointerover', () => {
+                        opcao_2.setScale(1.1);
+                        this.input.setDefaultCursor('pointer');
+                    });
 
-                opcao_1.on('pointerdown', function () {
+                    opcao_2.on('pointerout', () => {
+                        opcao_2.setScale(1.0);
+                        this.input.setDefaultCursor('default');
+                    });
 
-                    if (tela.altera_status) {
+                    opcao_1.on('pointerdown', function () {
 
-                        entusiasmo += tela.opcao_1.entusiasmo;
-                        conhecimento += tela.opcao_1.conhecimento;
-                        relacionamento += tela.opcao_1.relacionamento;
-                    }
+                        if (tela.altera_status) {
 
-                    textBoxBorder_opcao_1.destroy();
-                    textBoxBorder_opcao_2.destroy();
-                    textBox_opcao_1.destroy();
-                    textBox_opcao_2.destroy();
-                    opcao_1.destroy();
-                    opcao_2.destroy();
-                    prox_tela = tela.opcao_1.prox_tela;
-                    avancarTela(prox_tela);
-                });
+                            entusiasmo += tela.opcao_1.entusiasmo;
+                            conhecimento += tela.opcao_1.conhecimento;
+                            relacionamento += tela.opcao_1.relacionamento;
+                        }
 
-                opcao_2.on('pointerdown', function () {
+                        textBoxBorder_opcao_1.destroy();
+                        textBoxBorder_opcao_2.destroy();
+                        textBox_opcao_1.destroy();
+                        textBox_opcao_2.destroy();
+                        opcao_1.destroy();
+                        opcao_2.destroy();
+                        prox_tela = tela.opcao_1.prox_tela;
+                        avancarTela(prox_tela);
+                    });
 
-                    if (tela.altera_status) {
+                    opcao_2.on('pointerdown', function () {
 
-                        entusiasmo += tela.opcao_2.entusiasmo;
-                        conhecimento += tela.opcao_2.conhecimento;
-                        relacionamento += tela.opcao_2.relacionamento;
-                    }
+                        if (tela.altera_status) {
 
-                    textBoxBorder_opcao_1.destroy();
-                    textBoxBorder_opcao_2.destroy();
-                    textBox_opcao_1.destroy();
-                    textBox_opcao_2.destroy();
-                    opcao_1.destroy();
-                    opcao_2.destroy();
-                    prox_tela = tela.opcao_2.prox_tela;
-                    avancarTela(prox_tela);
-                });
+                            entusiasmo += tela.opcao_2.entusiasmo;
+                            conhecimento += tela.opcao_2.conhecimento;
+                            relacionamento += tela.opcao_2.relacionamento;
+                        }
 
-            }
+                        textBoxBorder_opcao_1.destroy();
+                        textBoxBorder_opcao_2.destroy();
+                        textBox_opcao_1.destroy();
+                        textBox_opcao_2.destroy();
+                        opcao_1.destroy();
+                        opcao_2.destroy();
+                        prox_tela = tela.opcao_2.prox_tela;
+                        avancarTela(prox_tela);
+                    });
 
-            if (!tela.dialogoInterativo) {
+                }
 
-                const botao_continuar = this.add.graphics();
-                botao_continuar.fillStyle(0xFFFFFF, 0.95); //seta a tranparencia da caixa de texto aqui
-                botao_continuar.fillRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 470, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
-                botao_continuar.setInteractive();
-                continuar = this.add.text(pos_x_caixa_texto_personagens + 30, pos_y_caixa_texto_personagens + 480, tela.texto_padrao, { fontFamily: 'Arial', fontSize: '24px', fill: '#000' });
-                continuar.setInteractive();
+                if (!tela.dialogoInterativo) {
 
-                const textBoxBorder_continuar = this.add.graphics();
-                textBoxBorder_continuar.lineStyle(2, 0x603913);
-                textBoxBorder_continuar.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 470, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
+                    const botao_continuar = this.add.graphics();
+                    botao_continuar.fillStyle(0xFFFFFF, 0.95); //seta a tranparencia da caixa de texto aqui
+                    botao_continuar.fillRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 470, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
+                    botao_continuar.setInteractive();
+                    continuar = this.add.text(pos_x_caixa_texto_personagens + 30, pos_y_caixa_texto_personagens + 480, tela.texto_padrao, { fontFamily: 'Arial', fontSize: '24px', fill: '#000' });
+                    continuar.setInteractive();
 
-                continuar.on('pointerover', () => {
-                    continuar.setScale(1.1);
-                    this.input.setDefaultCursor('pointer');
-                });
+                    const textBoxBorder_continuar = this.add.graphics();
+                    textBoxBorder_continuar.lineStyle(2, 0x603913);
+                    textBoxBorder_continuar.strokeRoundedRect(pos_x_caixa_texto_personagens, pos_y_caixa_texto_personagens + 470, tam_x_caixa_texto_personagens, tam_y_caixa_texto_personagens / 4, 10);
 
-                continuar.on('pointerout', () => {
-                    continuar.setScale(1.0);
-                    this.input.setDefaultCursor('default');
-                });
+                    continuar.on('pointerover', () => {
+                        continuar.setScale(1.1);
+                        this.input.setDefaultCursor('pointer');
+                    });
 
-                continuar.on('pointerdown', function () {
+                    continuar.on('pointerout', () => {
+                        continuar.setScale(1.0);
+                        this.input.setDefaultCursor('default');
+                    });
 
-                    botao_continuar.destroy();
-                    continuar.destroy();
-                    textBoxBorder_continuar.destroy();
-                    prox_tela = tela.prox_tela;
-                    avancarTela(prox_tela);
-                });
+                    continuar.on('pointerdown', function () {
 
+                        botao_continuar.destroy();
+                        continuar.destroy();
+                        textBoxBorder_continuar.destroy();
+                        prox_tela = tela.prox_tela;
+                        avancarTela(prox_tela);
+                    });
+
+                }
             }
 
 
@@ -1071,7 +1159,7 @@ class Level extends Phaser.Scene {
                 if (opcaoSelecionada == valor_esperado) {
                     console.log("correto  --- " + opcaoSelecionada + "  " + valor_esperado);
                     pontos_teste_estatico += 1;
-                    pontos_totais+=1;
+                    pontos_totais += 1;
                     resposta_certa.setVisible(true);
 
 
@@ -1239,7 +1327,7 @@ class Level extends Phaser.Scene {
                 enunciado.destroy();
 
                 if (resultado) {
-                    pontos_totais+=1;
+                    pontos_totais += 1;
                     construirTela(11);
                 }
                 else {
@@ -1375,7 +1463,7 @@ class Level extends Phaser.Scene {
 
                 if (resultado) {
                     console.log("proxima tela");
-                    pontos_totais+=1;
+                    pontos_totais += 1;
                     construirTela(78);
                 }
                 else {
@@ -1539,7 +1627,7 @@ class Level extends Phaser.Scene {
                     console.log("correto  --- " + opcaoSelecionada + "  " + valor_esperado);
                     resposta_certa.setVisible(true);
                     pontos_pergunta += 1;
-                    pontos_totais+=1;
+                    pontos_totais += 1;
 
 
 
@@ -1571,6 +1659,11 @@ class Level extends Phaser.Scene {
             btn_continuar.on('pointerdown', () => {
 
                 this.input.setDefaultCursor('default');
+                enunciado_2.destroy();
+                btn_continuar.destroy();
+                verificar_btn.destroy();
+                rect1.destroy();
+                rect2.destroy();
 
                 if (desafio_pergunta < 4) {
 
@@ -1578,19 +1671,10 @@ class Level extends Phaser.Scene {
 
                 } else if (pontos_pergunta > 2) {
 
-                    enunciado_2.destroy();
-                    btn_continuar.destroy();
-                    verificar_btn.destroy();
-                    rect1.destroy();
-                    rect2.destroy();
                     construirTela(29);
 
                 } else {
-                    enunciado_2.destroy();
-                    btn_continuar.destroy();
-                    verificar_btn.destroy();
-                    rect1.destroy();
-                    rect2.destroy();
+
                     construirTela(30);
 
                 }
@@ -2007,7 +2091,7 @@ class Level extends Phaser.Scene {
                 }
                 else {
                     btn_continuar.destroy();
-                    construirTela(90);
+                    reportarBugs();
                 }
 
             });
@@ -2104,6 +2188,7 @@ class Level extends Phaser.Scene {
         //jogarJogoDaMemoria();
         //exibirAnimacaoFaculdade();
         //exibirAnimacaoSemana();
+        //construirTela(0);
     }
 }
 

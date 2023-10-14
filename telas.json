@@ -128,7 +128,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 7,
-        "texto_padrao": "Continuar"
+        "texto_padrao": "Claro"
     },
     {
         "id": 7,
@@ -143,7 +143,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 8,
-        "texto_padrao": "Certo..",
+        "texto_padrao": "Eu já ouvi falar mesmo",
         "referencias": "pressman"
     },
     {
@@ -191,7 +191,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "jogo_adivinhar_funcao_qa",
-        "texto_padrao": "Continuar",
+        "texto_padrao": "Vamos lá!",
         "referencias": "pressman"
     },
     {
@@ -207,7 +207,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 13,
-        "texto_padrao": "Continuar",
+        "texto_padrao": "Fácil demais, Otavio.",
         "referencias": "pressman"
     },
     {
@@ -223,7 +223,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 13,
-        "texto_padrao": "Continuar",
+        "texto_padrao": "Agora eu entendi..",
         "referencias": "pressman"
     },
     {
@@ -267,7 +267,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_cena_transicao_1",
-        "texto_padrao": "Continuar",
+        "texto_padrao": "Espero",
         "referencias": "pressman"
     },
     {
@@ -283,7 +283,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_cena_transicao_1",
-        "texto_padrao": "Continuar",
+        "texto_padrao": "Medo.",
         "referencias": "pressman"
     },
     {
@@ -327,7 +327,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 23,
-        "texto_padrao": "Continuar",
+        "texto_padrao": "Por favor!",
         "referencias": "pressman"
     },
     {
@@ -451,7 +451,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 25,
-        "texto_padrao": "Certo..",
+        "texto_padrao": "Nunca nem ouvi falar.",
         "referencias": "pressman"
     },
     {
@@ -479,11 +479,11 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Aparentemente você já deve ter percebido, mas enfrentamos alguns \nproblemas de comunicação aqui na Jogos Dourados. \n\nMas enfim, vamos ao que interessa.",
+        "texto": "Aparentemente você já deve ter percebido, mas enfrentamos alguns problemas \nde comunicação aqui na Jogos Dourados. \n\nMas enfim, vamos ao que interessa.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 27,
-        "texto_padrao": "Certo..",
+        "texto_padrao": "Melhor né..",
         "referencias": "pressman"
     },
     {
@@ -495,11 +495,11 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Vamos lá.. estamos trabalhando nesse jogo, chamado 'Jogo da Memória'. \nNele, o jogador deve combinar duas figuras semelhantes \npara fazer pontos.",
+        "texto": "Ótimo.. estamos trabalhando nesse jogo, chamado 'Jogo da Memória'. É bem \ninovador! Nele, o jogador deve combinar duas figuras semelhantes para fazer \npontos.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 28,
-        "texto_padrao": "Certo..",
+        "texto_padrao": "Hummm..",
         "referencias": "pressman"
     },
     {
@@ -559,7 +559,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Estou ansioso para saber como vai se sair amanhã. \nPor hoje, é isso. Recomendo que fale com o Otavio, ele tem algumas dicas \nlegais para te passar.",
+        "texto": "Estou ansioso para saber como vai se sair amanhã. Por hoje, é isso. \nRecomendo que fale \ncom o Otavio, ele tem algumas dicas legais para te passar.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_animacao_dormitorio",
@@ -623,7 +623,7 @@
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 35,
-        "texto_padrao": "...",
+        "texto_padrao": "É.",
         "referencias": "pressman"
     },
     {
@@ -790,7 +790,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Sim, estamos muito felizes. Parece que alguém vai ter seu trabalho posto à \nprova, não é mesmo?",
+        "texto": "Sim, estamos muito felizes. Afinal, temos coisas para serem avaliadas, não é mesmo?",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 44,
@@ -800,7 +800,7 @@
     {
         "id": 44,
         "personagem": "julia",
-        "emocao": "happy_d",
+        "emocao": "angry_d",
         "posicao": {
             "x": 220,
             "y": 500
@@ -857,7 +857,7 @@
         "texto": "E é mesmo! Mas sua presença aqui vai nos ajudar a evitar passar por isso. \nEssa é sua tarefa hoje.",
         "visivel": true,
         "dialogoInterativo": false,
-        "prox_tela": 48,
+        "prox_tela": 49,
         "texto_padrao": "Certo..",
         "referencias": "pressman"
     },
@@ -870,11 +870,11 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "A verdade é que ela está ansiosa para ver o meu trabalho sendo avaliado, só \nisso. ",
+        "texto": "A verdade é que ela gosta de me encher o saco, só isso.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 49,
-        "texto_padrao": "Sim, parece isso mesmo",
+        "texto_padrao": "",
         "referencias": "pressman"
     },
     {
@@ -903,11 +903,11 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Para responder sua pergunta, vamos ver o que 'alguém' deixou escrito na lousa \nontem!",
+        "texto": "Para responder sua pergunta, eu pedi ajuda do Otavio e escrevi algo na \nlousa para você ontem!",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_lousa_requisitos_funcionais",
-        "texto_padrao": "Estou indo",
+        "texto_padrao": "Ah, obrigada! Vamos ver.",
         "referencias": "pressman"
     },
     {
@@ -1350,7 +1350,7 @@
         "texto_padrao": "Vou começar"
     },
     {
-        "id": 90,
+        "id": 100,
         "personagem": "julia",
         "emocao": "happy_e",
         "posicao": {
@@ -1361,11 +1361,11 @@
         "texto": "Parece que terminamos por aqui, não é mesmo?",
         "visivel": true,
         "dialogoInterativo": false,
-        "prox_tela": 91,
+        "prox_tela": 101,
         "texto_padrao": "Sim, eu terminei"
     },
     {
-        "id": 91,
+        "id": 101,
         "personagem": "julia",
         "emocao": "happy_e",
         "posicao": {
