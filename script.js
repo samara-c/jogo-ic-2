@@ -139,6 +139,7 @@ class Level extends Phaser.Scene {
         this.load.image('enunciado_jogo_4', 'img/games_files/enunciado_verdadeiro_1.png');
         this.load.image('enunciado_jogo_5', 'img/games_files/enunciado_verdadeiro_2.png');
         this.load.image('enunciado_jogo_6', 'img/games_files/enunciado_verdadeiro_3.png');
+        this.load.image('enunciado_jogo_7', 'img/games_files/enunciado_jogo_3.png');
         this.load.image('box', 'https://labs.phaser.io/assets/sprites/block.png');
         this.load.image('resposta_correta', 'img/games_files/resposta_correta.png');
         this.load.image('resposta_errada', 'img/games_files/resposta_errada.png');
@@ -147,6 +148,7 @@ class Level extends Phaser.Scene {
         this.load.image('jogo_relogio_3', 'img/games_files/jogo_relogio_3.png');
         this.load.image('jogo_relogio_4', 'img/games_files/jogo_relogio_4.png');
         this.load.image('jogo_relogio_5', 'img/games_files/jogo_relogio_5.png');
+        this.load.image('tela_carta', 'img/games_files/tela_carta.png');
 
         //Jogo da memoria
         this.load.image('card_back', 'img/games_files/card_back.png');
@@ -184,6 +186,7 @@ class Level extends Phaser.Scene {
         let personagem;
         let botaoAvancar;
         let semana = 0;
+        let pontos = 0;
 
         //Atributos psicologicos personagem
         let entusiasmo = 0;
@@ -196,6 +199,7 @@ class Level extends Phaser.Scene {
         let desafio_requisitos_valor = 1;
         let pontos_pergunta = 0;
         let pontos_teste_estatico = 0;
+        let marcador_dia = 0;
 
         let relogio_ativo = false;
         let tempo_relogio = 180;
@@ -231,7 +235,7 @@ class Level extends Phaser.Scene {
 
         var centerX = this.cameras.main.width / 2;
         var centerY = this.cameras.main.height / 1.9;
-        var vezes_que_pode_reiniciar_o_jogo = 4;
+        var vezes_que_pode_reiniciar_o_jogo = 3;
 
         // Cursor
         this.input.setDefaultCursor('default');
@@ -432,14 +436,8 @@ class Level extends Phaser.Scene {
                     semana_1 += 1;
                     construirTela(42);
 
-                } else if (pontos_totais >= 5) {
-
-                    construirTela(80);
-
-
                 } else {
-
-                    construirTela(81);
+                    calculaNotaFinal();
                 }
             });
 
@@ -1026,6 +1024,7 @@ class Level extends Phaser.Scene {
             var valor_esperado = null;
             var verificar_btn;
             var btn_continuar;
+            var correcao_bug = 0;
 
 
 
@@ -1160,6 +1159,7 @@ class Level extends Phaser.Scene {
                     console.log("correto  --- " + opcaoSelecionada + "  " + valor_esperado);
                     pontos_teste_estatico += 1;
                     pontos_totais += 1;
+                    pontos+=50;
                     resposta_certa.setVisible(true);
 
 
@@ -1189,6 +1189,16 @@ class Level extends Phaser.Scene {
             });
 
             btn_continuar.on('pointerdown', () => {
+
+                rects[0].removeAllListeners();
+                rects[1].removeAllListeners();
+                rects[0].destroy();
+                rects[1].destroy();
+                verificar_btn.destroy();
+                btn_continuar.destroy();
+                enunciado_2.destroy();
+                video.destroy();
+                
 
                 if (desafio_requisitos < 6) {
 
@@ -1327,7 +1337,8 @@ class Level extends Phaser.Scene {
                 enunciado.destroy();
 
                 if (resultado) {
-                    pontos_totais += 1;
+                    //pontos_totais += 1;
+                    pontos+=100;
                     construirTela(11);
                 }
                 else {
@@ -1366,7 +1377,7 @@ class Level extends Phaser.Scene {
             const background = this.add.image(450, 300, 'table');
             background.setScale(1.8);
 
-            const enunciado = this.add.image(centerX, centerY - 240, 'enunciado_jogo_1');
+            const enunciado = this.add.image(centerX, centerY - 240, 'enunciado_jogo_7');
             enunciado.setScale(0.8);
 
             const rectWidth = 500;
@@ -1463,7 +1474,7 @@ class Level extends Phaser.Scene {
 
                 if (resultado) {
                     console.log("proxima tela");
-                    pontos_totais += 1;
+                    pontos+=100;
                     construirTela(78);
                 }
                 else {
@@ -1628,6 +1639,7 @@ class Level extends Phaser.Scene {
                     resposta_certa.setVisible(true);
                     pontos_pergunta += 1;
                     pontos_totais += 1;
+                    pontos+=50;
 
 
 
@@ -1978,9 +1990,10 @@ class Level extends Phaser.Scene {
             let flippedCards = [];
             let canFlip = true;
             let numAttempts = 0;
-            const maxAttempts = 3;
+            const maxAttempts = 2;
             let cards_restantes = 6;
             var botao_reiniciar;
+            var fim_de_jogo = false;
 
             cards = this.add.group();
 
@@ -1990,14 +2003,15 @@ class Level extends Phaser.Scene {
             const fundo = this.add.image(560, 340, 'fundo_jogo_memoria');
             vezes_que_pode_reiniciar_o_jogo -= 1;
 
-            var textoDia = this.add.text(40, 80, 'Reinícios permitidos: ' + vezes_que_pode_reiniciar_o_jogo, { fontFamily: 'arial', fontSize: '24px', fill: '#1E8449' });
-
-
+            var textoDia = this.add.text(40, 80, 'Reinícios permitidos: ' + parseInt(vezes_que_pode_reiniciar_o_jogo), { fontFamily: 'arial', fontSize: '28px', fill: '#1E8449' });
+           
+            var cards_total = [];
 
 
             for (let i = 0; i < numPairs; i++) {
                 for (let j = 0; j < 2; j++) {
                     const card = this.add.image((centerX - 160) + 160 * i, (centerY - 130) + 200 * j, 'card_back').setScale(0.9, 0.9).setInteractive();
+                    cards_total[j] = card;
                     card.frontImage = cardImages[i];
                     card.isFlipped = false;
 
@@ -2012,6 +2026,9 @@ class Level extends Phaser.Scene {
                     card.on('pointerout', () => {
                         this.input.setDefaultCursor('default');
                     });
+
+
+
                 }
             }
 
@@ -2090,6 +2107,11 @@ class Level extends Phaser.Scene {
                     jogarJogoDaMemoria();
                 }
                 else {
+                    var pos = 0;
+                    while(pos<cards_total.length){
+                        cards_total[pos].destroy();
+                        pos+=1;
+                    }
                     btn_continuar.destroy();
                     reportarBugs();
                 }
@@ -2099,6 +2121,58 @@ class Level extends Phaser.Scene {
             construirHUD();
 
         };
+
+        const exibeTelaCarta = () => {
+
+            const background = this.add.image(560, 340, 'tela_carta');
+            var btn_continuar;
+            btn_continuar = this.add.image(centerX, centerY + 270, 'continuar_btn_formatado');
+            btn_continuar.setScale(0.9);
+            btn_continuar.setInteractive();
+
+
+            btn_continuar.on('pointerover', () => {
+                btn_continuar.setScale(1);
+                this.input.setDefaultCursor('pointer');
+            });
+
+            btn_continuar.on('pointerout', () => {
+                btn_continuar.setScale(0.9);
+                this.input.setDefaultCursor('default');
+            });
+
+            btn_continuar.on('pointerdown', () => {
+
+                background.destroy();
+                btn_continuar.destroy();
+                this.input.setDefaultCursor('default');
+                exibirCenaFinal();
+
+            });
+
+
+            construirHUD();
+
+        }
+
+
+        const calculaNotaFinal = () => {
+
+          if (pontos>=550) {
+
+            construirTela(999);
+
+          } else if (pontos >= 350 && pontos <549 ) {
+
+            exibeTelaCarta();
+
+          } else {
+            construirTela(998);
+          }  
+
+          construirHUD();
+        };
+
 
 
 
@@ -2123,6 +2197,7 @@ class Level extends Phaser.Scene {
             //backpackIcon.setInteractive(); // Habilitar interação com o ícone
 
             var textoDia = this.add.text(40, 17, 'Semana: ' + semana, { fontFamily: 'acherus_grotesque', fontSize: '24px', fill: '#FFFFFF' });
+            var pontosTela = this.add.text(180, 17, 'Pontos: ' + pontos, { fontFamily: 'acherus_grotesque', fontSize: '24px', fill: '#FFFFFF' });
 
             var texto_icone_livro = this.add.text(970, 20, "Referências", { fontFamily: 'Arial', fontSize: '12px', fill: '#FFFFFF' });
             texto_icone_livro.setVisible(false);
@@ -2189,6 +2264,9 @@ class Level extends Phaser.Scene {
         //exibirAnimacaoFaculdade();
         //exibirAnimacaoSemana();
         //construirTela(0);
+        //reportarBugs();
+        //exibirCenaFinal();
+        //exibeTelaCarta();
     }
 }
 

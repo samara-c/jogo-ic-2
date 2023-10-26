@@ -559,7 +559,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Estou ansioso para saber como vai se sair amanhã. Por hoje, é isso. \nRecomendo que fale \ncom o Otavio, ele tem algumas dicas legais para te passar.",
+        "texto": "Estou ansioso para saber como vai se sair amanhã. Por hoje, é isso. \nRecomendo que fale com o Otavio, ele tem algumas dicas legais para te \npassar.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_animacao_dormitorio",
@@ -790,7 +790,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Sim, estamos muito felizes. Afinal, temos coisas para serem avaliadas, não é mesmo?",
+        "texto": "Sim, estamos muito felizes. Afinal, temos coisas para serem avaliadas, não é \nmesmo?",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 44,
@@ -1410,7 +1410,7 @@
         "texto_padrao": "Por que você acha isso?"
     },
     {
-        "id": 78,
+        "id": 80,
         "personagem": "pedro",
         "emocao": "sad_e",
         "posicao": {
@@ -1418,7 +1418,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Haviam dois bugs na aplicação (segundo o Otavio): na mensagem de \nvitoria e os cartoes continuavam clicáveis (quando não deveriam) após o final.",
+        "texto": "O teste do Otavio identificou dois bugs: o jogo exibe a mensagem de vitória \nantes que o jogador possa concluir o jogo, e as cartas ainda permanecem \nclicáveis após o fim.",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": 81,
@@ -1433,7 +1433,7 @@
             "y": 500
         },
         "fundo": "school",
-        "texto": "Bom, eu acho que finalizamos por aqui.. \nTe retornaremos em breve, com os resultados da sua semana aqui",
+        "texto": "Bom, eu acho que finalizamos por aqui.. \nTe retornaremos em breve, para te dar um feedback sobre sua experiência \naqui",
         "visivel": true,
         "dialogoInterativo": false,
         "prox_tela": "exibir_cena_transicao_dia_seguinte",
